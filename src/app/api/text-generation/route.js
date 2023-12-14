@@ -2,11 +2,9 @@ import { StreamingTextResponse } from 'ai';
 import { Ai } from '@cloudflare/ai';
 import { WorkersAiStream } from '../../lib/WorkersAiStream';
 
-
 export const runtime = 'edge';
 // This is required to enable streaming
 export const dynamic = 'force-dynamic';
-
 
 export async function POST(request) {
   const ai = new Ai(process.env.AI);
