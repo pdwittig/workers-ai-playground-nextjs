@@ -8,11 +8,12 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
   const ai = new Ai(process.env.AI);
-  const { prompt } = await request.json();
+  const { prompt, model, maxTokens } = await request.json();
 
-  const res = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+  const res = await ai.run(model, {
     prompt,
-    stream: true
+    max_tokens: maxTokens,
+    stream: true,
   });
 
   const stream = WorkersAiStream(res);

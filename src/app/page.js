@@ -1,10 +1,11 @@
+"use client";
 import Image from 'next/image'
-import Completion from './components/Completion';
+import Playground from '../components/playground';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Completion />
+    <main className="container flex min-h-screen flex-col justify-between p-24">
+      <Playground />
     </main>
   )
 }
