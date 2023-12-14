@@ -2,6 +2,14 @@ export const types = ["Cloudflare", "Hugging Face"]
 
 export const models = [
   {
+    id: "@cf/meta/llama-2-7b-chat-int8",
+    name: "llama-2-7b-chat-int8  ",
+    description: "Very capable, but faster and lower cost than Davinci.",
+    type: "Cloudflare",
+    strengths:
+      "Language translation, complex classification, sentiment, summarization",
+  },
+  {
     id: "@cf/meta/llama-2-7b-chat-fp16",
     name: "llama-2-7b-chat-fp16",
     description:
@@ -9,14 +17,6 @@ export const models = [
     type: "Cloudflare",
     strengths:
       "Complex intent, cause and effect, creative generation, search, summarization for audience",
-  },
-  {
-    id: "@cf/meta/llama-2-7b-chat-int8",
-    name: "llama-2-7b-chat-int8  ",
-    description: "Very capable, but faster and lower cost than Davinci.",
-    type: "GPT-3",
-    strengths:
-      "Language translation, complex classification, sentiment, summarization",
   },
   {
     id: "@cf/mistral/mistral-7b-instruct-v0.1",
