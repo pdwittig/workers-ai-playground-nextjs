@@ -12,7 +12,7 @@ export async function POST(request, context) {
   const ai = new Ai(process.env.AI);
   const { prompt, model, maxTokens } = await request.json();
 
-  // log({ promp, model, maxTokens }, context);
+  log({ promp, model, maxTokens }, context);
   
   const res = await ai.run(model, {
     prompt,
